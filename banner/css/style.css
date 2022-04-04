@@ -1,0 +1,141 @@
+@font-face {
+  font-family: Cambria;
+  src: url(/banner/assets/fonts/Cambria.eot);
+}
+
+* {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: Cambria;
+}
+
+body {
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: cornflowerblue;
+}
+
+.jpt-section.section-banner {
+  height: 100px;
+}
+
+.jpt-section.section-carousell {
+  display: flex;
+  align-items: center;
+  width: 140px;
+  height: 110px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.section-slides {
+  display: flex;
+  height: 110px;
+  width: 140%;
+  display: flex;
+}
+
+.image {
+  width: 140px;
+  min-height: 80px;
+  /* z-index: 1; */
+}
+
+video {
+  width: 150px;
+  min-height: 110px;
+  margin-top: -15px;
+  margin: 0;
+}
+
+.section-slides input {
+  display: none;
+}
+
+.section-slide {
+  transition: 2s;
+  width: 80%;
+}
+
+/* .section-slide img { 
+  width: 800px;
+  height: 500px;
+} */
+
+.section-manual-navigation {
+  position: absolute;
+  width: 120px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto 0 auto;
+}
+
+label:not(:last-child) {
+  margin-right: 10px;
+}
+
+label {
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1.8s;
+}
+
+label:hover {
+  background-color: white;
+}
+
+#radio1:checked ~ .section-slide-first {
+  margin-left: 0;
+}
+#radio2:checked ~ .section-slide-first {
+  margin-left: -140px;
+}
+#radio3:checked ~ .section-slide-first {
+  margin-left: -280px;
+}
+#radio4:checked ~ .section-slide-first {
+  margin-left: -420px;
+}
+#radio5:checked ~ .section-slide-first {
+  margin-left: -570px;
+}
+
+.section-auto-navigation {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 100px;
+}
+.section-auto-navigation div {
+  border: 2px solid red;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.section-auto-navigation div:not(:last-child) {
+  margin-right: 10px;
+}
+
+#radio1:checked ~ .section-auto-navigation .auto-btn1 {
+  background: red;
+}
+#radio2:checked ~ .section-auto-navigation .auto-btn2 {
+  background: red;
+}
+#radio3:checked ~ .section-auto-navigation .auto-btn3 {
+  background: red;
+}
+#radio4:checked ~ .section-auto-navigation .auto-btn4 {
+  background: red;
+}
+#radio5:checked ~ .section-auto-navigation .auto-btn5 {
+  background: red;
+}

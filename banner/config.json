@@ -1,0 +1,14 @@
+{
+	"clickurl": "http://www.example.com",
+	"format": "Footer Ad",
+	"showexpanded": "no",
+
+	"height": {
+		"collapsed": "13%",
+		"expanded": "25%"
+	},
+
+	"style": {
+		"background": "white"
+	}
+}

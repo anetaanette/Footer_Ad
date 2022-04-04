@@ -1,0 +1,147 @@
+<!--
+ justpremium_dev_environment v3.3.0 2022-01-26 
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JustPremium | Preview</title>
+    <style>
+      body {
+        padding-bottom: 10px;
+        margin: 0;
+      }
+      iframe#iframe_creative {
+        height: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        min-height: 90px;
+        height: 13%;
+        transition: height 0.5s;
+        transition-timing-function: ease-in-out;
+      }
+      iframe#iframe_website {
+        height: 5000px;
+        width: 100%;
+        border: none;
+      }
+      #close-btn {
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNjUgMjY1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNjUgMjY1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2Rpc3BsYXk6bm9uZTtmaWxsOiMzNTI3QzE7fQoJLnN0MXtvcGFjaXR5OjAuMztlbmFibGUtYmFja2dyb3VuZDpuZXcgICAgO30KCS5zdDJ7c3Ryb2tlOiNGRkZGRkY7c3Ryb2tlLXdpZHRoOjEyO3N0cm9rZS1saW5lY2FwOnJvdW5kO30KPC9zdHlsZT4KPHJlY3QgeD0iLTEyIiB5PSItOSIgY2xhc3M9InN0MCIgd2lkdGg9IjMwMiIgaGVpZ2h0PSIyOTUiLz4KPHRpdGxlPkFydGJvYXJkIDI8L3RpdGxlPgo8Y2lyY2xlIGlkPSJPdmFsIiBjbGFzcz0ic3QxIiBjeD0iMTMyLjUiIGN5PSIxMzIuNSIgcj0iMTI3LjUiLz4KPHBhdGggaWQ9IkxpbmUiIGNsYXNzPSJzdDIiIGQ9Ik0xODguMiw3Ni44bC0xMTQuNSwxMTgiLz4KPHBhdGggaWQ9IkxpbmUtMiIgY2xhc3M9InN0MiIgZD0iTTE5MS40LDE5NC44TDc2LjgsNzYuOCIvPgo8L3N2Zz4K)
+          no-repeat;
+        z-index: 5;
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        display: block;
+        pointer-events: none;
+        bottom: 5px;
+        right: 5px;
+      }
+      @media (max-height: 600px) and (min-width: 481px) {
+        #close-btn,
+        iframe#iframe_creative {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body jpx-id="cf">
+    <iframe
+      id="iframe_website"
+      src="//lab.justpremium.com/demosite/noscroll/"
+    ></iframe
+    ><iframe id="iframe_creative" class="jpx-wrapper" frameborder="0"></iframe>
+    <div id="close-btn"></div>
+
+    <script src="//cdn.justpremium.com/Justpremium/boilerplate/lib/gsap_3.0.1.js"></script>
+    <script>
+      !(function () {
+        var n,
+          e,
+          i = document.getElementById("iframe_creative"),
+          t = document.getElementById("iframe_website"),
+          o = document.getElementById("close-btn"),
+          a = new XMLHttpRequest();
+        function s(e) {
+          n &&
+            e &&
+            e.currentTarget === i &&
+            "load" === e.type &&
+            ("yes" === n.showexpanded
+              ? c()
+              : (i.addEventListener("mouseenter", c),
+                i.addEventListener("mouseleave", d))),
+            i.contentWindow.addEventListener("resize", r),
+            r();
+        }
+        function d() {
+          (i.style.height = n.height.collapsed), p("default");
+        }
+        function c() {
+          (i.style.height = n.height.expanded), p("expand");
+        }
+        function r() {
+          var e = i.getBoundingClientRect();
+          (o.style.left = e.right - o.offsetWidth - 5 + "px"),
+            (o.style.top = e.top + 5 + "px");
+        }
+        function l() {
+          e &&
+            n &&
+            t.contentWindow.postMessage(
+              { format: n.format, version: "3.3.0" },
+              "*"
+            );
+        }
+        function p(e) {
+          for (
+            var t = document.getElementsByTagName("IFRAME"), n = 0;
+            n < t.length;
+            n++
+          ) {
+            var i;
+            "function" == typeof Event
+              ? (i = new Event(e))
+              : (i = document.createEvent("Event")).initEvent(e, !0, !1);
+            try {
+              t[n].contentWindow.Premium.jpxApi.dispatchEvent(i);
+            } catch (e) {}
+          }
+        }
+        (TweenLite.defaultEase = Power1.easeInOut),
+          a.overrideMimeType("application/json"),
+          a.open("GET", "banner/config.json", !0),
+          (a.onreadystatechange = function () {
+            4 == a.readyState &&
+              "200" == a.status &&
+              ((n = JSON.parse(a.responseText)),
+              l(),
+              TweenMax.set(i, { height: n.height.collapsed }),
+              TweenMax.set(i, { css: n.style }),
+              s());
+          }),
+          a.send(null),
+          (window.jpxApiInterface = {
+            setCollapsedHeight: function (e, t) {
+              (n.height.collapsed = e + ("percent" === t ? "%" : "px")),
+                (i.style.transition = "none"),
+                (i.style.height = n.height.collapsed),
+                setTimeout(function () {
+                  i.style.transition = "";
+                }, 20);
+            },
+            setExpandedHeight: function (e, t) {
+              n.height.expanded = e + ("percent" === t ? "%" : "px");
+            },
+          }),
+          i.addEventListener("load", s),
+          t.addEventListener("load", function () {
+            (e = !0), l();
+          }),
+          (i.src = "banner/index.html");
+      })();
+    </script>
+  </body>
+</html>
