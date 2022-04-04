@@ -11,11 +11,12 @@
 }
 
 body {
-  height: 110vh;
+  height: 100vh;
   display: flex;
+  flex-grow: 1;
   justify-content: center;
   align-items: center;
-  background-color: cornflowerblue;
+  background-color: black;
 }
 
 .jpt-section.section-banner {
@@ -27,14 +28,7 @@ body {
   align-items: center;
   width: 140px;
   height: 110px;
-  border-radius: 15px;
   overflow: hidden;
-}
-.section-slides {
-  display: flex;
-  height: 110px;
-  width: 140%;
-  display: flex;
 }
 
 .image {
@@ -44,34 +38,36 @@ body {
 }
 
 video {
-  width: 150px;
-  min-height: 110px;
-  margin-top: -15px;
+  max-width: 140px;
+  max-height: 120px;
   margin: 0;
+  margin-top: 5px;
 }
 
 .section-slides input {
   display: none;
 }
+.section-slides {
+  display: flex;
+  flex-grow: 1;
+  height: 100px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 .section-slide {
   transition: 2s;
-  width: 80%;
 }
-
-/* .section-slide img { 
-  width: 800px;
-  height: 500px;
-} */
 
 .section-manual-navigation {
   position: absolute;
   width: 120px;
-  margin-top: 80px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px auto 0 auto;
+  margin: 115px auto 0 auto;
 }
 
 label:not(:last-child) {
@@ -103,18 +99,19 @@ label:hover {
   margin-left: -420px;
 }
 #radio5:checked ~ .section-slide-first {
-  margin-left: -570px;
+  margin-left: -560px;
 }
 
 .section-auto-navigation {
   position: absolute;
   display: flex;
-  width: 800px;
+  width: 120px;
+  align-items: center;
   justify-content: center;
   margin-top: 100px;
 }
 .section-auto-navigation div {
-  border: 2px solid red;
+  border: 2px solid white;
   padding: 5px;
   border-radius: 10px;
   transition: 1s;
@@ -125,17 +122,17 @@ label:hover {
 }
 
 #radio1:checked ~ .section-auto-navigation .auto-btn1 {
-  background: red;
+  background: white;
 }
 #radio2:checked ~ .section-auto-navigation .auto-btn2 {
-  background: red;
+  background: white;
 }
 #radio3:checked ~ .section-auto-navigation .auto-btn3 {
-  background: red;
+  background: white;
 }
 #radio4:checked ~ .section-auto-navigation .auto-btn4 {
-  background: red;
+  background: white;
 }
 #radio5:checked ~ .section-auto-navigation .auto-btn5 {
-  background: red;
+  background: white;
 }
