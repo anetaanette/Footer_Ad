@@ -7,7 +7,6 @@ Premium.creative = {
 		
 		let showDefault = function(){
 			
-			
 		}
 
 		let showExpanded = function(){
@@ -21,15 +20,8 @@ Premium.creative = {
 		Premium.jpxApi.on("default", showDefault);
 		Premium.jpxApi.on("expand", showExpanded);
 
-		const counter = 1;
-		setInterval(function() {
-			document.querySelectorAll(".radio" + counter).checked = true;
-			counter++;
-			if(counter > 5) {
-				counter = 1;
-			} 
-		}, 2);
-
+		
+			
 		/* END OF CUSTOM JS */
 	}
 }

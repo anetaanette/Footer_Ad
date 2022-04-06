@@ -13,7 +13,6 @@
 body {
   height: 100vh;
   display: flex;
-  flex-grow: 1;
   justify-content: center;
   align-items: center;
   background-color: black;
@@ -21,6 +20,9 @@ body {
 
 .jpt-section.section-banner {
   height: 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
 }
 
 .jpt-section.section-carousell {
@@ -135,4 +137,14 @@ label:hover {
 }
 #radio5:checked ~ .section-auto-navigation .auto-btn5 {
   background: white;
+}
+
+.section-car {
+  box-shadow: 0px 5px 15px 10px rgba(181, 182, 184, 0.63);
+}
+
+.car {
+  height: 90px;
+  width: 160px;
+  margin-top: 10px;
 }
