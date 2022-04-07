@@ -71,7 +71,7 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 115px auto 0 10px;
+  margin: 116px auto 0 10px;
 }
 
 label:not(:last-child) {
