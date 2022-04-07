@@ -35,8 +35,8 @@ body {
 }
 
 .image {
-  width: 140px;
-  min-height: 80px;
+  /* width: 140px;
+  min-height: 80px; */
   /* z-index: 1; */
 }
 
@@ -143,6 +143,7 @@ label:hover {
 
 .section-car {
   width: 180px;
+  perspective: 100px;
 }
 
 .car {
@@ -150,6 +151,7 @@ label:hover {
   width: 170px;
   margin-top: 12px;
   padding: 0 10px 0 20px;
+  transform-style: preserve-3d;
 }
 
 .section-see-more {
@@ -159,4 +161,14 @@ label:hover {
 .see-more {
   width: 250px;
   border-radius: 20px;
+}
+
+.image:hover {
+  width: 200px;
+  height: 120px;
+}
+
+.section-slides:hover {
+  width: 200px;
+  height: 120px;
 }
