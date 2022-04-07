@@ -37,6 +37,7 @@ body {
 .image {
   width: 140px;
   min-height: 80px;
+  margin-top: 5px;
 }
 
 video {
@@ -56,6 +57,7 @@ video {
   width: 100%;
   margin: 0;
   padding: 0;
+  animation: 10s slider infinite;
 }
 
 .section-slide {
@@ -165,26 +167,15 @@ label:hover {
   border-radius: 20px;
 }
 
-/* .image:hover {
-  width: 200px;
-  height: 120px;
-}
-
-.section-slides:hover {
-  width: 200px;
-  height: 120px;
-}
- */
-
 .section-banner:hover {
   gap: 10px;
   transition: 1.3s;
 }
 
-@media only screen and (max-width: 800px) {
-  .section-banner {
+@media only screen and (max-width: 900px) {
+  .jpt-section.section-banner {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     flex-shrink: 2;
   }
   .see-more {
