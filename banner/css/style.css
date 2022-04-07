@@ -25,6 +25,36 @@ body {
   gap: 100px;
 }
 
+.section-banner:hover {
+  gap: 10px;
+  transition: 1.3s;
+}
+
+.section-see-more {
+  margin-top: 15px;
+  height: 66px;
+  border-radius: 20px;
+  box-shadow: 0px 15px 15px -10px hsl(210, 6%, 75%);
+}
+
+.see-more {
+  width: 250px;
+  border-radius: 20px;
+}
+
+.section-car {
+  width: 180px;
+  perspective: 100px;
+}
+
+.car {
+  height: 80px;
+  width: 170px;
+  margin-top: 12px;
+  padding: 0 10px 0 20px;
+  transform-style: preserve-3d;
+}
+
 .jpt-section.section-carousell {
   display: flex;
   align-items: center;
@@ -32,19 +62,6 @@ body {
   height: 110px;
   overflow: hidden;
   margin-left: 30px;
-}
-
-.image {
-  width: 140px;
-  min-height: 80px;
-  margin-top: 5px;
-}
-
-video {
-  max-width: 140px;
-  max-height: 120px;
-  margin: 0;
-  margin-top: 5px;
 }
 
 .section-slides input {
@@ -61,6 +78,39 @@ video {
 
 .section-slide {
   transition: 2s;
+}
+
+.image {
+  width: 140px;
+  min-height: 80px;
+  margin-top: 5px;
+}
+
+video {
+  max-width: 140px;
+  max-height: 120px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.section-auto-navigation {
+  position: absolute;
+  display: flex;
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.section-auto-navigation div {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+  display: none;
+}
+
+.section-auto-navigation div:not(:last-child) {
+  margin-right: 10px;
 }
 
 .section-manual-navigation {
@@ -105,26 +155,6 @@ label:hover {
   margin-left: -560px;
 }
 
-.section-auto-navigation {
-  position: absolute;
-  display: flex;
-  width: 120px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-}
-.section-auto-navigation div {
-  border: 2px solid black;
-  padding: 5px;
-  border-radius: 10px;
-  transition: 1s;
-  display: none;
-}
-
-.section-auto-navigation div:not(:last-child) {
-  margin-right: 10px;
-}
-
 #radio1:checked ~ .section-auto-navigation .auto-btn1 {
   background: black;
 }
@@ -139,36 +169,6 @@ label:hover {
 }
 #radio5:checked ~ .section-auto-navigation .auto-btn5 {
   background: black;
-}
-
-.section-car {
-  width: 180px;
-  perspective: 100px;
-}
-
-.car {
-  height: 80px;
-  width: 170px;
-  margin-top: 12px;
-  padding: 0 10px 0 20px;
-  transform-style: preserve-3d;
-}
-
-.section-see-more {
-  margin-top: 15px;
-  height: 66px;
-  border-radius: 20px;
-  box-shadow: 0px 15px 15px -10px hsl(210, 6%, 75%);
-}
-
-.see-more {
-  width: 250px;
-  border-radius: 20px;
-}
-
-.section-banner:hover {
-  gap: 10px;
-  transition: 1.3s;
 }
 
 @media only screen and (max-width: 900px) {
